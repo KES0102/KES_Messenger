@@ -1,0 +1,71 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<!--<meta charset="windows-1251">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="RocketCake">
+
+	<title>KesMess</title>
+	<link rel="stylesheet" type="text/css" href="static/chat1_html.css">
+</head>
+<body>
+
+
+<div class="textstyle1">
+	<div id="container_5d6f4aff"><div id="container_5d6f4aff_padding" >
+		<div class="textstyle1"><div id="container_3ecdb7db">
+			<div id="container_3ecdb7db_padding" ><div class="textstyle1">
+
+				<span  th:text="${person.nameTwo}" id="span1" class="textstyle2">User<br/><br/></span>
+
+				<div id="container_6322fe62"><div id="container_6322fe62_padding" ><div class="textstyle1">  <div id="text_30ba40bc">
+				</div>
+				</div>
+					<div style="clear:both"></div></div></div>
+				<div th:each="personNew: ${person_list}">
+					<span th:text="${personNew.getMessage()}" class="textstyle3">values</span>
+
+				</div>
+                <div><span id="span2"></span></div>
+
+				<div id="container_59299990"><div class="textstyle1">
+
+					<form  th:method="POST" th:action="@{/chat1}" th:object="${person}" enctype="application/x-www-form-urlencoded" id="form_41e5572d">
+						<input type="hidden" th:field="*{idTwo}" value="" title="" name="TextEdit1"   >
+						<input type="hidden" th:field="*{nameTwo}"  value="" title="" name="TextEdit1"  >
+						<input type="hidden" th:field="*{idOne}"  value="" title="" name="TextEdit1"  >
+						<div id="form_41e5572d_padding" ><div class="textstyle1">
+
+							<input th:field="*{message}" type="text" name="TextEdit3" title="" id="edit_5fdec02b"
+								   placeholder="send" required="required">
+
+							<!--<textarea th:field="*{email}" name="TextEdit3" title=""
+									  placeholder="send" required="required" cols="37" rows="7"  id="edit_5fdec02b"></textarea>-->
+							<input name="Button2" type="submit" value="send" title=""  id="button_5b5d7ea1" ></div><div style="clear:both"></div></div>
+					</form>
+
+				</div></div></div>
+				<div style="clear:both"></div></div></div></div>
+		<div style="clear:both"></div></div></div>  </div>
+
+<script>const eventSource = new EventSource('http://192.168.1.105:8080/stream-sse');
+
+	eventSource.addEventListener('TEST-EVENT', function (e){
+		//console.log(e.data);
+		span2.innerHTML=e.data+"<br>";
+		//customPrintUi("Получили данные: "+e.data);
+	}, false);
+
+	/*eventSource.onerror=function (e){
+	customPrintUi("Произошла ошибка.");
+	};*/
+
+	/*function customPrintUi(msg){
+		span1.innerHTML=msg+"<br>";
+		document.documentElement.scrollTop=99999999;
+	}*/
+</script>
+
+</body>
+</html>

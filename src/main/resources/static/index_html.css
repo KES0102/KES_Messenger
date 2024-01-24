@@ -1,0 +1,23 @@
+a { color:#5D5D9E; } 
+a:visited { color:#5D5D9E; } 
+a:active { color:#5C615E; } 
+a:hover { color:#B2B3B4; } 
+body { background-color:#C0C0C0; border: 10px solid #404040; padding:0;  margin: 0; }
+.textstyle1 { text-align:left; }
+#container_30174d59 { box-sizing: border-box; vertical-align: top; position:relative; display: inline-block; width:100%; min-height:400px; background:none; border: 1px solid #404040;  }
+#container_30174d59_padding { margin: 10px; display: block;  }
+#container_36bd4fd1 { box-sizing: border-box; vertical-align: top; border-radius: 8px; position:relative; display: inline-block; margin:0px 10px 0px 0px;width:100%; min-height:400px; min-width:400px; background-color:#EEF4ED; background: linear-gradient(to bottom, #9BC59B, #EEF4ED); border: 4px solid #404040;  }
+#container_36bd4fd1_padding { margin: 10px; display: block;  }
+#form_3f52f5e { box-sizing: border-box; vertical-align: top; border-radius: 5px; position:relative; display: inline-block; width:100%; min-height:238px; background:none; border: 3px solid #000040;  }
+#form_3f52f5e_padding { margin: 10px; display: block;  }
+.textstyle2 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+.textstyle3 { text-align:right; }
+#container_1994e0d2 { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:58px; background:none;  }
+#container_1994e0d2_padding { margin: 10px; display: block;  }
+#text_44c6c9cc { position:absolute; left:0%; top:29%; background:none;  }
+#edit_4f41ecfa { vertical-align: bottom; border-radius: 5px; position:relative; display: inline-block; width:70%; height:30px; background-color:#FFFFFF; font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+#container_2e184021 { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:59px; background:none;  }
+#container_2e184021_padding { margin: 10px; display: block;  }
+#text_66e929c9 { position:absolute; left:0%; top:29%; background:none;  }
+#edit_6d14fdfd { vertical-align: bottom; border-radius: 5px; position:relative; display: inline-block; width:70%; height:30px; background-color:#FFFFFF; font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+#button_169edec1 { box-sizing: border-box; vertical-align: bottom; border-radius: 5px; position:relative; display: inline-block; width:100px; height:30px; border: 2px solid #404040; font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }

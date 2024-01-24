@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="RocketCake">
+	<title>KesMess</title>
+	<link rel="stylesheet" type="text/css" href="static/index_html.css">
+</head>
+<body>
+<div class="textstyle1">
+<div id="container_30174d59"><div id="container_30174d59_padding" ><div class="textstyle1"><div id="container_36bd4fd1"><div id="container_36bd4fd1_padding" ><div class="textstyle1">
+
+	<form  th:action="@{/person}" th:object="${person1Person2MSG}" enctype="application/x-www-form-urlencoded" method="POST" id="form_3f52f5e">
+
+		<div id="form_3f52f5e_padding" ><div class="textstyle1"><span class="textstyle2"><br/><br/></span></div>
+        <div class="textstyle3"><div id="container_1994e0d2"><div id="container_1994e0d2_padding" ><div class="textstyle1"><div id="text_44c6c9cc"><div class="textstyle1">
+	    <span class="textstyle2">Emails: </span></div></div></div><div class="textstyle3">
+
+	<input type="text" th:field="*{email}" value="" title="" name="TextEdit1"  id="edit_4f41ecfa" >
+
+		    </div><div style="clear:both"></div></div></div></div><div class="textstyle1"><span class="textstyle2"><br/><br/></span><div id="container_2e184021"><div id="container_2e184021_padding" >
+			<div class="textstyle1"><div id="text_66e929c9"><div class="textstyle1">  <span class="textstyle2">Password: </span></div></div></div><div class="textstyle3">
+
+	<input type="text" th:field="*{password}" value="" title="" name="TextEdit2"  id="edit_6d14fdfd" >
+
+</div>
+<div style="clear:both"></div></div></div><span class="textstyle2"><br/><br/><br/></span></div>
+<div class="textstyle3">
+	<input name="Button1" type="submit" value="&#1042;&#1093;&#1086;&#1076;" title=""  id="button_169edec1" >
+</div>
+<div style="clear:both"></div></div></form></div>
+	<a href="registration" th:method="GET">Registration</a>
+<div style="clear:both"></div></div></div></div>
+<div style="clear:both"></div></div></div>  </div>
+</body>
+</html>

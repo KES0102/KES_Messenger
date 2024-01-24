@@ -1,0 +1,53 @@
+a { color:#5D5D9E; }
+a:visited { color:#5D5D9E; }
+a:active { color:#5C615E; }
+a:hover { color:#B2B3B4; }
+#button_38dcaec { vertical-align: bottom; border-radius: 5px; position:relative; display: inline-block; width:100%; height:40px; background-color:#93A848; box-shadow: 7px 7px 10px -5px rgba(0, 0, 0, 0.784314);  }
+#button_38dcaec:hover { background-color:#ADB887;  }
+#button_38dcaec:hover span { color:#FFFFFF; }
+body { background-color:#C0C0C0; border: 10px solid #404040; padding:0;  margin: 0; }
+.textstyle1 { text-align:left; }
+#container_6771e4d8 { box-sizing: border-box; vertical-align: top; position:relative; display: inline-block; width:100%; min-height:400px; min-width:400px; background:none; border: 1px solid #404040;  }
+#container_6771e4d8_padding { margin: 10px; display: block;  }
+#container_64485fad { box-sizing: border-box; vertical-align: top; border-radius: 8px; position:relative; display: inline-block; margin:0px 10px 0px 0px;width:100%; min-height:400px; min-width:400px; background-color:#E3E3D6; background: linear-gradient(to bottom, #B8B880, #E3E3D6); border: 4px solid #404040;  }
+#container_64485fad_padding { margin: 10px; display: block;  }
+.textstyle2 { font-size:20pt; font-family:Arial, Helvetica, sans-serif; color:#000000; font-weight:bold;  }
+#container_4dd2eac8 { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:150px; background:none;  }
+#container_4dd2eac8_padding { margin: 10px; display: block;  }
+#button_38dcaec_padding { margin: 12px 0px 0px 20px;display: block;  }
+.vcenterstyle1 { display: table; width: 100%; height: 100%; }
+.vcenterstyle2 { display: table-cell; vertical-align: middle; }
+.textstyle3 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+
+/* Стиль для моей кнопки---------------------------------------------------------------------*/
+.styled {
+    width:100%;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(
+            to top left,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2) 30%,
+            rgba(0, 0, 0, 0)
+    );
+    box-shadow:
+            inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+            inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow:
+            inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+            inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
