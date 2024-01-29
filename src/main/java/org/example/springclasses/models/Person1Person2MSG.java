@@ -77,4 +77,17 @@ public class Person1Person2MSG {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "Person1Person2MSG{" +
+                "idOne=" + idOne +
+                ", idTwo=" + idTwo +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", nameOne='" + nameOne + '\'' +
+                ", nameTwo='" + nameTwo + '\'' +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }

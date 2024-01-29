@@ -9,14 +9,20 @@
 </head>
 <body>
 
-<form th:method="POST" th:action="@{/chat1}" th:object="${person1Person2MSGTemp}"    id="form_1" >
-	<input type="hidden" th:field="*{idTwo}" value="" title="" name="TextEdit1"   >
-	<input type="hidden" th:field="*{nameTwo}"  value="" title="" name="TextEdit1"  >
+<div th:each="p: ${personlist}">
+
+	<form th:method="POST" th:action="@{/chat1}"     th:id="${p.getNameTwo()}" >
+		<input type="hidden" th:value="${person.getIdOne()}" title="" name="idOne"  >
+		<input type="hidden" th:value="${p.getIdTwo()}" name="idTwo"  >
+	</form>
+
+</div>
+
+<!--<form th:method="POST" th:action="@{/chat1}" th:object="${person2}"    id="form_1" >
+
 	<input type="hidden" th:field="*{idOne}"  value="" title="" name="TextEdit1"  >
 
-</form>
-
-</form>
+</form>-->
 
 <div class="textstyle1">
 	<div id="container_6771e4d8"><div id="container_6771e4d8_padding" >
@@ -25,12 +31,14 @@
 				<div class="textstyle1">
 					<span class="textstyle2">Chats<br/><br/></span>
 
-					<div id="container_4dd2eac8">
-						<button th:form="form_1" class="favorite styled"
-								th:text="${person1Person2MSGTemp.getNameTwo()}">hhhh
+					<div th:each="p: ${personlist}" id="container_4dd2eac8">
+						<button th:form="${p.getNameTwo()}" class="favorite styled"
+								th:text="${p.getNameTwo()}">hhhh
 						</button>
 
-					</div></div>
+					</div>
+
+				</div>
 				<div style="clear:both"></div></div></div></div>
 		<div style="clear:both"></div></div>
 

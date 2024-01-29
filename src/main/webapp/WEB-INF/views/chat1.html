@@ -23,6 +23,7 @@
 				</div>
 				</div>
 					<div style="clear:both"></div></div></div>
+
 				<div th:each="personNew: ${person_list}">
 					<span th:text="${personNew.getMessage()}" class="textstyle3">values</span>
 
@@ -32,9 +33,10 @@
 				<div id="container_59299990"><div class="textstyle1">
 
 					<form  th:method="POST" th:action="@{/chat1}" th:object="${person}" enctype="application/x-www-form-urlencoded" id="form_41e5572d">
+						<input type="hidden" th:field="*{idOne}"  value="" title="" name="TextEdit1"  >
 						<input type="hidden" th:field="*{idTwo}" value="" title="" name="TextEdit1"   >
 						<input type="hidden" th:field="*{nameTwo}"  value="" title="" name="TextEdit1"  >
-						<input type="hidden" th:field="*{idOne}"  value="" title="" name="TextEdit1"  >
+
 						<div id="form_41e5572d_padding" ><div class="textstyle1">
 
 							<input th:field="*{message}" type="text" name="TextEdit3" title="" id="edit_5fdec02b"
@@ -51,7 +53,8 @@
 
 <script>const eventSource = new EventSource('http://192.168.1.105:8080/stream-sse');
 
-	eventSource.addEventListener('TEST-EVENT', function (e){
+	eventSource.addEventListener(document.getElementById("idOne").getAttribute("value"), function (e){
+		//window.alert(document.getElementById("idTwo").getAttribute("value"));
 		//console.log(e.data);
 		span2.innerHTML=e.data+"<br>";
 		//customPrintUi("Получили данные: "+e.data);

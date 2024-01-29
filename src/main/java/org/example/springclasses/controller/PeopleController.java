@@ -25,6 +25,8 @@ import java.util.UUID;
 @RequestMapping("/")
 public class PeopleController {
 
+
+
     private final PersonDAO personDAO;
 
     @Autowired
@@ -47,24 +49,29 @@ public class PeopleController {
     }
 
 
-    //-----------------------------------------------------------Chats Список
+    // --Chats Список
     @PostMapping("/person")
-    public String login (Model model, @ModelAttribute("person") Person1Person2MSG person1){
+    public String login (Model model, @ModelAttribute("person") Person1Person2MSG person){
 
-
-        // Возвращает id и name человека кому пишем и id авторизовавшегося
-        List<Person1Person2MSG> list=personDAO.search(person1.getEmail(), person1.getPassword());
-
-        model.addAttribute("person1Person2MSGTemp", list.get(0));
+        person.setIdOne(personDAO.getIdFromEmail(person.getEmail()));
+        //person.setIdOne(2);
+        // Возвращает список всех людей
+        List<Person1Person2MSG> list=personDAO.searchAll(person);
+        System.out.println(list.size());
+        model.addAttribute("personlist", list);
         return "person";
     }
 
-    //-----------------------------------------------------------------------------------------Message send
+
+    // --Запрос страницы с чатами--------------------------------------------------------------
     @PostMapping("/chat1")
     public String goChat(Model model, @ModelAttribute("person") Person1Person2MSG person){
-
+        //System.out.println(person.toString());
         // По ключу person:
-        //                 idOne, idTwo, nameTwo, message
+        //                 idOne, idTwo, message(после  кнопки send)
+
+
+
         if(person.getMessage()!=null){
             personDAO.saveMessage(person);
 
@@ -79,7 +86,7 @@ public class PeopleController {
                         try {var event= SseEmitter.event()
                                 .data(person.getMessage(), MediaType.APPLICATION_JSON)
                                 .id(String.valueOf(UUID.randomUUID()))
-                                .name("TEST-EVENT");
+                                .name(String.valueOf(person.getIdTwo()));
                             e.send(event);
 
 
@@ -89,8 +96,8 @@ public class PeopleController {
                     }
             );
             person.setMessage("");
-}
-    List<Person1Person2MSG> list=personDAO.readTableForMessages(person);
+        }
+    List<Person1Person2MSG> list=personDAO.readTableAfterMessages(person);
     List<Person1Person2MSG> listTemp=new ArrayList<>(10);
 
         for (int i=list.size()-1; i>=0; i--) {

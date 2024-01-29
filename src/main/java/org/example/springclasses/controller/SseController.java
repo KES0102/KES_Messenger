@@ -25,9 +25,10 @@ public class SseController {
     public SseEmitter streamSse() throws IOException {
 
         SseEmitter sseEmitter=new SseEmitter(Long.MAX_VALUE);
-        sseEmitter.send(SseEmitter.event().name("SUBSCRIBE"));
+        //sseEmitter.send(SseEmitter.event().name("SUBSCRIBE"));
         emitters.add(sseEmitter);
         System.out.println("emitters.size()= "+emitters.size());
+        System.out.println(sseEmitter.toString());
         return sseEmitter;
     }
 
