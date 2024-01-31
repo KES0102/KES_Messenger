@@ -24,11 +24,18 @@
 				</div>
 					<div style="clear:both"></div></div></div>
 
-				<div th:each="personNew: ${person_list}">
-					<span th:text="${personNew.getMessage()}" class="textstyle3">values</span>
+				<div><span th:text="${person_list.get(0).getMessage()}" id="spanMes1" class="textstyle3">values</span></div>
+			    <div><span th:text="${person_list.get(1).getMessage()}" id="spanMes2" class="textstyle3">values</span></div>
+			    <div><span th:text="${person_list.get(2).getMessage()}" id="spanMes3" class="textstyle3">values</span></div>
+				<div><span th:text="${person_list.get(3).getMessage()}" id="spanMes4" class="textstyle3">values</span></div>
+				<div><span th:text="${person_list.get(4).getMessage()}" id="spanMes5" class="textstyle3">values</span></div>
+				<div><span th:text="${person_list.get(5).getMessage()}" id="spanMes6" class="textstyle3">values</span></div>
+				<div><span th:text="${person_list.get(6).getMessage()}" id="spanMes7" class="textstyle3">values</span></div>
+				<div><span th:text="${person_list.get(7).getMessage()}" id="spanMes8" class="textstyle3">values</span></div>
+				<div><span th:text="${person_list.get(8).getMessage()}" id="spanMes9" class="textstyle3">values</span></div>
+				<div><span th:text="${person_list.get(9).getMessage()}" id="spanMes10" class="textstyle3">values</span></div>
 
-				</div>
-                <div><span id="span2"></span></div>
+				<div><span id="span2"></span></div>
 
 				<div id="container_59299990"><div class="textstyle1">
 
@@ -56,7 +63,10 @@
 	eventSource.addEventListener(document.getElementById("idOne").getAttribute("value"), function (e){
 		//window.alert(document.getElementById("idTwo").getAttribute("value"));
 		//console.log(e.data);
-		span2.innerHTML=e.data+"<br>";
+		for(var i=1; i<10; i++){
+			document.getElementById("spanMes"+i).innerHTML=document.getElementById("spanMes"+(i+1)).innerText
+		}
+		spanMes10.innerHTML=e.data+"<br>";
 		//customPrintUi("Получили данные: "+e.data);
 	}, false);
 

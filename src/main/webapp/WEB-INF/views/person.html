@@ -14,6 +14,7 @@
 	<form th:method="POST" th:action="@{/chat1}"     th:id="${p.getNameTwo()}" >
 		<input type="hidden" th:value="${person.getIdOne()}" title="" name="idOne"  >
 		<input type="hidden" th:value="${p.getIdTwo()}" name="idTwo"  >
+		<input type="hidden" th:value="${p.getNameTwo()}" name="nameTwo"  >
 	</form>
 
 </div>

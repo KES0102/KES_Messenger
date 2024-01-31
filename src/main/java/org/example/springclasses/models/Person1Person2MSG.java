@@ -10,7 +10,9 @@ public class Person1Person2MSG {
 
     private String message;// сообщение от 1 к 2-му
 
-    public Person1Person2MSG(){}
+    public Person1Person2MSG(){
+
+    }
 
     public Person1Person2MSG(int idOne, int idTwo, String email, String password, String nameOne, String nameTwo, String message) {
         this.idOne = idOne;
